@@ -26,7 +26,7 @@ cmdfile = "{0}".format(args.cmdfile)
 
 # Device Credentials
 user = 'admin'
-passwd = 'c0bra42b'
+passwd = 'Extreme123!'
 
 if not os.path.isdir(PATH+'/log'):
     os.makedirs(PATH+'/log')

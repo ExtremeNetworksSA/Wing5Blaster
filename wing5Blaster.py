@@ -107,8 +107,12 @@ def main():
                     continue	
             else:
                 ip = device
-                dns = socket.gethostbyaddr(ip)
-                device = dns[0]
+                try:
+                    dns = socket.gethostbyaddr(ip)
+                    device = dns[0]
+                    print("DNS for {} is {}".format(ip, device))
+                except:
+                    print("The DNS for {} was not found".format(ip))
             try:
                 print("connecting to", device)
                 socket.inet_aton(ip)
